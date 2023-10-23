@@ -1,8 +1,10 @@
 package com.mhamzak.leadmanagementapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.mhamzak.leadmanagementapp.HomeScene.HomeActivity
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,7 +26,8 @@ class LoginActivity : AppCompatActivity() {
     private fun setupButton(){
         val loginButton = findViewById<Button>(R.id.login_button)
         loginButton.setOnClickListener {
-            print("Button Tapped")
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
         }
     }
 }
